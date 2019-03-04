@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import Card from '../components/Card';
+
 const Counter = () => {
   const [count, setCount] = useState(0);
 
@@ -9,11 +11,12 @@ const Counter = () => {
   });
   
   return (
-    <div>
+    <Card>
       <h1>Counter</h1>
       <div>Count : {count}</div>
       <button onClick={() => setCount(count + 1)}>up</button>
-    </div>
+      <button onClick={() => setCount(count - 1)}>down</button>
+    </Card>
   )
 }
 
